@@ -1,0 +1,42 @@
+movies/{movieId}
+    title: string
+    overview: string
+    poster: string
+    backdrop: string
+    rating: number
+    releaseDate: number
+    runtime: number
+    genres: [string]
+
+
+actors/{actorId}
+    name: string
+    gender: number
+    profile: string
+    birthday: string
+    deathday: string
+    biography: string
+
+
+characters/{characterId}
+        name: string
+        movieId: {movieId}
+        actorId: {actorId}
+
+
+genres/{genreId}
+    name: string
+
+
+users/{userId}
+    email: string
+    name: string
+    role: string
+    passwordHash: string
+    profile: string
+
+    favoriteMovies/{movieId}
+        exists: boolean
+
+    ratedMovies/{movieId}
+        rating: number
